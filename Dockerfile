@@ -1,12 +1,17 @@
-FROM debian
-RUN apt-get update && apt-get install -y python python-pip python-dev mysql-client libmysqlclient-dev
+FROM debian:testing
+MAINTAINER Jinserk Baik <jinserk.baik@gmail.com>
+
+RUN apt update -y
+RUN apt dist-upgrade -y
+RUN apt install -y python3 python3-pip python3-dev build-essential
 
 ADD . /app
 WORKDIR /app
 
-RUN ./bin/peep.py install -r requirements/base.txt
-RUN ./bin/peep.py install -r requirements/dev.txt
+RUN pip3 install -r requirements/base.txt
+RUN pip3 install -r requirements/dev.txt
 
-EXPOSE 80
+EXPOSE 5000
 
-CMD ["gunicorn", "muffin.wsgi:application", "-b 0.0.0.0:80", "-w 2", "--log-file", "-"]
+ENTRYPOINT ["python3"]
+CMD ["main.py", "run", "--bind", "0.0.0.0:5000"]
