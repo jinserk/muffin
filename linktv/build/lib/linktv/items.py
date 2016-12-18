@@ -5,11 +5,15 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item, Field
 
-class LinkTvItem(scrapy.Item):
+class LinkTvItem(Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    date = scrapy.Field()
-    link = scrapy.Field()
+    # name = Field()
+    title = Field()
+    data = Field()
+
+class TitleItem(Item):
+    date = Field()
+    link = Field()
 
