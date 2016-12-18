@@ -1,0 +1,14 @@
+setup.py
+linktv/__init__.py
+linktv/customexport.py
+linktv/items.py
+linktv/middlewares.py
+linktv/pipelines.py
+linktv/settings.py
+linktv/spiders/__init__.py
+linktv/spiders/linktv.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
