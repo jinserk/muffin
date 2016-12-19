@@ -9,11 +9,7 @@ from scrapy import Item, Field
 
 class LinkTvItem(Item):
     # define the fields for your item here like:
-    # name = Field()
-    title = Field()
-    data = Field()
-
-class TitleItem(Item):
+    name = Field()
     date = Field()
     link = Field()
 
