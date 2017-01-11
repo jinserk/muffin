@@ -4,7 +4,7 @@ import os
 import subprocess as sp
 import aiohttp as ah
 from pathlib import Path
-from hubstorage import HubstorageClient
+from scrapinghub.hubstorage import HubstorageClient
 
 app = muffin.Application('devsrv')
 

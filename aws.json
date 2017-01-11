@@ -1,0 +1,95 @@
+{
+    "family": "shinbee",
+    "taskRoleArn": "",
+    "networkMode": "bridge",
+    "containerDefinitions": [
+        {
+            "name": "muffin",
+            "image": "294602679499.dkr.ecr.us-west-2.amazonaws.com/shinbee:latest",
+            "cpu": 1,
+            "memory": 512,
+            "memoryReservation": 0,
+            "links": [
+                ""
+            ],
+            "portMappings": [
+                {
+                    "containerPort": 5000,
+                    "hostPort": 80,
+                    "protocol": ""
+                }
+            ],
+            "essential": true,
+            "entryPoint": [
+                ""
+            ],
+            "command": [
+                ""
+            ],
+            "environment": [
+                {
+                    "name": "",
+                    "value": ""
+                }
+            ],
+            "mountPoints": [
+                {
+                    "sourceVolume": "",
+                    "containerPath": "",
+                    "readOnly": true
+                }
+            ],
+            "volumesFrom": [
+                {
+                    "sourceContainer": "",
+                    "readOnly": true
+                }
+            ],
+            "hostname": "",
+            "user": "",
+            "workingDirectory": "",
+            "disableNetworking": true,
+            "privileged": true,
+            "readonlyRootFilesystem": true,
+            "dnsServers": [
+                ""
+            ],
+            "dnsSearchDomains": [
+                ""
+            ],
+            "extraHosts": [
+                {
+                    "hostname": "",
+                    "ipAddress": ""
+                }
+            ],
+            "dockerSecurityOptions": [
+                ""
+            ],
+            "dockerLabels": {
+                "KeyName": ""
+            },
+            "ulimits": [
+                {
+                    "name": "",
+                    "softLimit": 0,
+                    "hardLimit": 0
+                }
+            ],
+            "logConfiguration": {
+                "logDriver": "",
+                "options": {
+                    "KeyName": ""
+                }
+            }
+        }
+    ],
+    "volumes": [
+        {
+            "name": "",
+            "host": {
+                "sourcePath": ""
+            }
+        }
+    ]
+}

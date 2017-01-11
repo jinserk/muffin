@@ -8,8 +8,7 @@ RUN apt install -y python3 python3-pip python3-dev build-essential
 ADD . /app
 WORKDIR /app
 
-RUN pip3 install -r requirements/base.txt
-RUN pip3 install -r requirements/dev.txt
+RUN pip3 install -r requirements.txt
 
 EXPOSE 5000
 
