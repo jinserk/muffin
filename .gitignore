@@ -1,5 +1,6 @@
 .env
 *.pyc
+*.yml
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

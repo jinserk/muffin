@@ -1,9 +1,11 @@
 import muffin
 import json
 import os
+import os.path
 import subprocess as sp
 import aiohttp as ah
 from pathlib import Path
+import yaml
 from scrapinghub.hubstorage import HubstorageClient
 
 app = muffin.Application('devsrv')
@@ -81,8 +83,12 @@ def linktv(request):
     return html
 
 def fetch_from_hc():
-    APIKEY = 'fa73d9f566ea472b93fdcfabfd602fdd'
+    APIKEY = ""
     PROJECT = '134699'
+    cfgfile = "linktv/scrapinghub.yml"
+    with open(cfgfile, 'r') as f: 
+        cfg = yaml.load(f)
+        APIKEY = cfg['apikeys']['default'] 
     hc = HubstorageClient(auth=APIKEY)
     project = hc.get_project(PROJECT)
     j_meta = project.jobq.list()
